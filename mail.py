@@ -22,9 +22,9 @@ def preprocess_image(image):
     return Image.fromarray(thresh)
 
 # مسیر فایل PDF و خروجی
-pdf_path = r"C:\Users\User NA\Desktop\New folder\part 4.pdf"  # مسیر فایل PDF
-output_file = r"C:\Users\User NA\Desktop\New folder\output.txt"  # مسیر فایل متنی
-output_image_folder = r"C:\Users\User NA\Desktop\New folder\images"  # پوشه برای تصاویر
+pdf_path = "input.pdf"  # مسیر فایل PDF
+output_file = "output.txt"  # مسیر فایل متنی
+output_image_folder = "images"  # پوشه برای تصاویر
 
 # بررسی وجود فایل PDF
 if not os.path.exists(pdf_path):
@@ -88,5 +88,6 @@ for i, page in enumerate(pages):
         print(f"gived text {image_path} sucsses.")
     except Exception as e:
         print(f"error {image_path}: {e}")
+
 
 print(f"saved in {output_file}.")
